@@ -1,0 +1,114 @@
+$btn-height: 48px;
+$btn-height-sm: 38px;
+
+$clr-primary: #322b5a;
+
+$clr-black: #000000;
+$clr-black-hover: #404342;
+$clr-black-disabled: #bdbbbc;
+
+$clr-grey: #d3d3d3;
+
+$clr-white: #fff;
+
+@mixin button($color, $background-color, $hover-color, $hover-background-color, $active-color, $active-background-color, $disabled-color, $disabled-background-color, $border-color : transparent, $border-radius : 0) {
+	&,
+	&:link,
+	&:visited,
+	&:not([href]) {
+		color: $color;
+		background-color: $background-color;
+		border-color: $border-color;
+		border-radius: $border-radius;
+	}
+
+	&:not(:disabled):not(.disabled) {
+		&:hover,
+		&:focus:not(.modal-just-close) {
+			color: $hover-color;
+			background-color: $hover-background-color;
+			border-color: $hover-background-color;
+		}
+
+		&:active,
+		&.active,
+		&:active:focus:not(.modal-just-close) {
+			color: $active-color;
+			background-color: $active-background-color;
+			border-color: $border-color;
+		}
+
+		&:focus:not(.modal-just-close),
+		&:active:focus:not(.modal-just-close),
+		&.active:focus:not(.modal-just-close) {
+			outline: 0;
+			border-color: $border-color;
+		}
+	}
+
+	&[disabled],
+	&:disabled,
+	&.disabled {
+		color: $disabled-color;
+		background-color: $disabled-background-color;
+		border-color: $disabled-color;
+		opacity: 1;
+		cursor: not-allowed;
+	}
+}
+
+
+.btn {
+	border: 1px solid;
+	text-decoration: none;
+	display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 25px;
+
+	&,
+	&:link,
+	&:visited,
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none;
+	}
+
+  &-lg {
+    height: $btn-height;
+	  line-height: $btn-height - 2px;
+  }
+
+	&-sm {
+		height: $btn-height-sm;
+		line-height: $btn-height-sm;
+	}
+
+	/*
+
+
+		LINK
+
+
+	 */
+
+	&-blue {
+		@include button($clr-white, $clr-primary, $clr-white, $clr-black-hover, $clr-primary, darken($clr-black, 0.5), $clr-primary, $clr-black-disabled, $clr-primary, 5px);
+	}
+
+  &-outline-grey {
+    @include button($clr-black, $clr-white, $clr-white, $clr-black-hover, $clr-white, darken($clr-black, 0.5), $clr-primary, $clr-black-disabled, $clr-grey, 5px)
+  }
+
+  &-link {
+    letter-spacing: 1px;
+    text-overflow: ellipsis;
+	  white-space: nowrap;
+	  max-width: 100%;
+	  overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+  }
+
+}
