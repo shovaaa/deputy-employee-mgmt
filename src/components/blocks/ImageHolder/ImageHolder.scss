@@ -1,0 +1,19 @@
+.imageHolder {
+  &-lg {
+    width: 100px;
+    height: 100px;
+  }
+
+  &-sm {
+    height: 40px;
+    width: 40px;
+  }
+
+  &-round {
+    border-radius: 50%;
+  }
+
+  &-square {
+    border-radius: unset;
+  }
+}

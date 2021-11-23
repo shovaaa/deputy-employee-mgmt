@@ -1,16 +1,3 @@
-$btn-height: 48px;
-$btn-height-sm: 38px;
-
-$clr-primary: #322b5a;
-
-$clr-black: #000000;
-$clr-black-hover: #404342;
-$clr-black-disabled: #bdbbbc;
-
-$clr-grey: #d3d3d3;
-
-$clr-white: #fff;
-
 @mixin button($color, $background-color, $hover-color, $hover-background-color, $active-color, $active-background-color, $disabled-color, $disabled-background-color, $border-color : transparent, $border-radius : 0) {
 	&,
 	&:link,

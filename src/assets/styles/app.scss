@@ -1,7 +1,9 @@
 //elements
-@import '../elements/modal';
+@import './elements/modal';
 
 //themes
+@import './theme/variables';
+
 @import './base';
 @import './blocks';
 @import './fonts';
