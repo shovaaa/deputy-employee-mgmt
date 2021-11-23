@@ -1,0 +1,26 @@
+$input-height: 28px;
+
+$input-height-sm: 18px;
+
+.input {
+  padding: 10px;
+  font-size: 14px;
+  width: 50%;
+  margin-top: 8px;
+
+  &-label {
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 12px;
+  }
+
+  &-lg {
+    height: $input-height;
+    line-height: $input-height;
+  }
+
+  &-sm {
+    height: $input-height-sm;
+    line-height: $input-height-sm;
+  }
+}
