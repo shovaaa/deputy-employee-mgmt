@@ -1,0 +1,22 @@
+.filter {
+  position: relative;
+
+  &-dropdownIcon {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+  }
+
+  &-dropdownMenu {
+    background-color: $clr-white;
+    box-shadow: 3px 3px 8px -1px $clr-grey, -3px 3px 8px -1px $clr-grey;
+    width: 200px;
+    height: auto;
+
+    &--item {
+      background-color: transparent;
+      border-color: transparent;
+      padding: 10px;
+    }
+  }
+}
