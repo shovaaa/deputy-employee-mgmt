@@ -16,7 +16,6 @@ export interface IEmployeeListing {
 };
 
 const EmployeeListingTable = (props: IProps) => {
-  console.log(props);
   return (
     <div className="employeeListingTable">
       <div className="container employeeListingTable-container">
@@ -40,7 +39,7 @@ const EmployeeListingTable = (props: IProps) => {
         {
           props.employeeDetails.map((employee, index) => {
             return (
-              <div className="row mb-3" key={index}>
+              <div className="row mb-3 d-flex align-items-center" key={index}>
                 <div className="col">
                   {employee.name}
                 </div>

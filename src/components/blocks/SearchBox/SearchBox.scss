@@ -1,0 +1,14 @@
+.searchBox {
+  margin-bottom: 20px;
+  position: relative;
+
+  &-icon {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+  }
+
+  .input {
+    padding-left: 35px;
+  }
+}
