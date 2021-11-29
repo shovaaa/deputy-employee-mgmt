@@ -9,7 +9,6 @@ export const data = {
     "variant": "outline-grey",
     "size": "sm",
     "buttonText": "Filter",
-    "buttonLink": "#",
     "buttonAlt": "filter",
     "buttonClass": "",
     "filterApi": "/api/employee/filter",

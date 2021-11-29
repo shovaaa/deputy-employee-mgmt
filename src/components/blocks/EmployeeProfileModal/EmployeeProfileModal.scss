@@ -1,7 +1,4 @@
 .EmployeeProfileModal {
-  width: 80%;
-  margin: 0 auto;
-
   &-heading {
     box-shadow: 0 4px 2px -2px $clr-grey;
     padding: 15px 20px;
@@ -20,7 +17,7 @@
   }
 
   &-userDetails {
-    width: 40%;
+    width: 50%;
     height: auto;
     padding: 5% 0;
     text-align: center;
@@ -53,5 +50,9 @@
 
   &-detailForm {
     padding: 3% 5%;
+
+    &--btn {
+      text-align: right;
+    }
   }
 }

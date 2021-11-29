@@ -7,8 +7,8 @@ const apiList = [
       payload: {
         employeeDetails: [
           {
-            "gender": "male",
-            "name": "Pasta Ham",
+            "gender": "female",
+            "name": "Elaine Gomez",
             "location": "Downtown",
             "email": "brad.gibson@example.com",
             "status": "Employed",
@@ -16,14 +16,13 @@ const apiList = [
               "variant": "outline-grey",
               "size": "sm",
               "buttonText": "View",
-              "buttonLink": "#",
               "buttonAlt": "view-more",
               "buttonClass": ""
             }
           },
           {
             "gender": "male",
-            "name": "Pasta Ham",
+            "name": "Peter Johnson",
             "location": "Downtown",
             "email": "brad.gibson@example.com",
             "status": "Employed",
@@ -31,7 +30,6 @@ const apiList = [
               "variant": "outline-grey",
               "size": "sm",
               "buttonText": "View",
-              "buttonLink": "#",
               "buttonAlt": "view-more",
               "buttonClass": ""
             }
@@ -46,8 +44,8 @@ const apiList = [
       payload: {
         employeeDetails: [
           {
-            "gender": "male",
-            "name": "Pizza Ham",
+            "gender": "female",
+            "name": "Rose Smith",
             "location": "Downtown",
             "email": "brad.gibson@example.com",
             "status": "Employed",
@@ -55,14 +53,13 @@ const apiList = [
               "variant": "outline-grey",
               "size": "sm",
               "buttonText": "View",
-              "buttonLink": "#",
               "buttonAlt": "view-more",
               "buttonClass": ""
             }
           },
           {
             "gender": "male",
-            "name": "Pasta Luke",
+            "name": "Luke Pitt",
             "location": "Downtown",
             "email": "brad.gibson@example.com",
             "status": "Employed",
@@ -70,7 +67,20 @@ const apiList = [
               "variant": "outline-grey",
               "size": "sm",
               "buttonText": "View",
-              "buttonLink": "#",
+              "buttonAlt": "view-more",
+              "buttonClass": ""
+            }
+          },
+          {
+            "gender": "male",
+            "name": "Jerry Seinfield",
+            "location": "Downtown",
+            "email": "brad.gibson@example.com",
+            "status": "Employed",
+            "viewMoreButton": {
+              "variant": "outline-grey",
+              "size": "sm",
+              "buttonText": "View",
               "buttonAlt": "view-more",
               "buttonClass": ""
             }

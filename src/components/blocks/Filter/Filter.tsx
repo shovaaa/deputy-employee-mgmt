@@ -24,7 +24,6 @@ const Filter = (props: IProps) => {
           size={props.size}
           buttonAlt={props.buttonAlt}
           buttonText={props.buttonText}
-          buttonLink={props.buttonLink}
           buttonClass={props.buttonClass}
         />
         <div className="filter-dropdownIcon">

@@ -1,7 +1,7 @@
 export const data = [
   {
-    "gender": "male",
-    "name": "Pasta Ham",
+    "gender": "female",
+    "name": "Suzie Pacino",
     "location": "Downtown",
     "email": "brad.gibson@example.com",
     "status": "Employed",
@@ -9,14 +9,14 @@ export const data = [
       "variant": "outline-grey",
       "size": "sm",
       "buttonText": "View",
-      "buttonLink": "#",
+      
       "buttonAlt": "view-more",
       "buttonClass": ""
     }
   },
   {
     "gender": "male",
-    "name": "Pasta Ham",
+    "name": "Rick Deen",
     "location": "Downtown",
     "email": "brad.gibson@example.com",
     "status": "Employed",
@@ -24,14 +24,14 @@ export const data = [
       "variant": "outline-grey",
       "size": "sm",
       "buttonText": "View",
-      "buttonLink": "#",
+      
       "buttonAlt": "view-more",
       "buttonClass": ""
     }
   },
   {
     "gender": "male",
-    "name": "Pasta Ham",
+    "name": "Sam Costanzo",
     "location": "Downtown",
     "email": "brad.gibson@example.com",
     "status": "Employed",
@@ -39,14 +39,29 @@ export const data = [
       "variant": "outline-grey",
       "size": "sm",
       "buttonText": "View",
-      "buttonLink": "#",
+      
+      "buttonAlt": "view-more",
+      "buttonClass": ""
+    }
+  },
+  {
+    "gender": "female",
+    "name": "Patricia Buttini",
+    "location": "Downtown",
+    "email": "brad.gibson@example.com",
+    "status": "Employed",
+    "viewMoreButton": {
+      "variant": "outline-grey",
+      "size": "sm",
+      "buttonText": "View",
+      
       "buttonAlt": "view-more",
       "buttonClass": ""
     }
   },
   {
     "gender": "male",
-    "name": "Pasta Ham",
+    "name": "Cosmo Kramer",
     "location": "Downtown",
     "email": "brad.gibson@example.com",
     "status": "Employed",
@@ -54,22 +69,7 @@ export const data = [
       "variant": "outline-grey",
       "size": "sm",
       "buttonText": "View",
-      "buttonLink": "#",
-      "buttonAlt": "view-more",
-      "buttonClass": ""
-    }
-  },
-  {
-    "gender": "male",
-    "name": "Pasta Ham",
-    "location": "Downtown",
-    "email": "brad.gibson@example.com",
-    "status": "Employed",
-    "viewMoreButton": {
-      "variant": "outline-grey",
-      "size": "sm",
-      "buttonText": "View",
-      "buttonLink": "#",
+      
       "buttonAlt": "view-more",
       "buttonClass": ""
     }
