@@ -23,7 +23,6 @@ const EmployeeListing = (props: IProps) => {
 
   const searchEmployee = (value: string) => {
     if (value.length < 3) return
-    console.log('val', value);
 
     axios.get(`${props.searchBox.callApi}?term=${value}`)
       .then(res => {
@@ -35,8 +34,6 @@ const EmployeeListing = (props: IProps) => {
   const filterEmployee = (value: string) => {
     if(!value) return;
 
-    console.log('fil', value);
-
     axios.get(`${props.filterButton.filterApi}?term=${value}`)
       .then(res => {
         const data = res.data.payload;
@@ -45,13 +42,11 @@ const EmployeeListing = (props: IProps) => {
   };
 
   useEffect(() => {
-    if (searchValue === '' || filterTerm === '') {
+    if (searchValue === '') {
       // eslint-disable-next-line
       setEmployeeDetails(props.employeeDetails);
       return;
     };
-
-    console.log('sv', searchValue);
 
     // eslint-disable-next-line
     searchValue && searchEmployee(searchValue);
@@ -63,8 +58,6 @@ const EmployeeListing = (props: IProps) => {
       setEmployeeDetails(props.employeeDetails);
       return;
     };
-
-    console.log('ft', filterTerm);
 
     // eslint-disable-next-line
     filterTerm && filterEmployee(filterTerm);
