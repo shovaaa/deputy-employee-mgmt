@@ -1,0 +1,57 @@
+.EmployeeProfileModal {
+  width: 80%;
+  margin: 0 auto;
+
+  &-heading {
+    box-shadow: 0 4px 2px -2px $clr-grey;
+    padding: 15px 20px;
+    position: relative;
+
+    &--title {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    &--close {
+      position: absolute;
+      right: 10px;
+      top: 13px;
+    }
+  }
+
+  &-userDetails {
+    width: 40%;
+    height: auto;
+    padding: 5% 0;
+    text-align: center;
+    background-color: $clr-light-grey;
+    
+    &--profileDetailContainer {
+      padding: 15px 0;
+
+      &-name {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      &-status {
+        color: $clr-dark-grey;
+      }
+    }
+
+    &--tab {
+      padding: 15px;
+      margin-left: 8px;
+      background-color: $clr-white;
+      text-align: left;
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &-detailForm {
+    padding: 3% 5%;
+  }
+}

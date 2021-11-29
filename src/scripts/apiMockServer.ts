@@ -17,7 +17,8 @@ const apiList = [
               "size": "sm",
               "buttonText": "View",
               "buttonLink": "#",
-              "buttonAlt": "view-more"
+              "buttonAlt": "view-more",
+              "buttonClass": ""
             }
           },
           {
@@ -31,7 +32,8 @@ const apiList = [
               "size": "sm",
               "buttonText": "View",
               "buttonLink": "#",
-              "buttonAlt": "view-more"
+              "buttonAlt": "view-more",
+              "buttonClass": ""
             }
           }
         ]
@@ -54,7 +56,8 @@ const apiList = [
               "size": "sm",
               "buttonText": "View",
               "buttonLink": "#",
-              "buttonAlt": "view-more"
+              "buttonAlt": "view-more",
+              "buttonClass": ""
             }
           },
           {
@@ -68,7 +71,8 @@ const apiList = [
               "size": "sm",
               "buttonText": "View",
               "buttonLink": "#",
-              "buttonAlt": "view-more"
+              "buttonAlt": "view-more",
+              "buttonClass": ""
             }
           }
         ]

@@ -4,4 +4,5 @@ export interface IButton {
   buttonText: string;
   buttonLink: string; 
   buttonAlt: string;
+  buttonClass: string;
 }

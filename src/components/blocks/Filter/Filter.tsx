@@ -25,6 +25,7 @@ const Filter = (props: IProps) => {
           buttonAlt={props.buttonAlt}
           buttonText={props.buttonText}
           buttonLink={props.buttonLink}
+          buttonClass={props.buttonClass}
         />
         <div className="filter-dropdownIcon">
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" className="bi bi-caret-down-fill" viewBox="0 0 16 16">

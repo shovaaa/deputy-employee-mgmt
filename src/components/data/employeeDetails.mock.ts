@@ -10,7 +10,8 @@ export const data = [
       "size": "sm",
       "buttonText": "View",
       "buttonLink": "#",
-      "buttonAlt": "view-more"
+      "buttonAlt": "view-more",
+      "buttonClass": ""
     }
   },
   {
@@ -24,7 +25,8 @@ export const data = [
       "size": "sm",
       "buttonText": "View",
       "buttonLink": "#",
-      "buttonAlt": "view-more"
+      "buttonAlt": "view-more",
+      "buttonClass": ""
     }
   },
   {
@@ -38,7 +40,8 @@ export const data = [
       "size": "sm",
       "buttonText": "View",
       "buttonLink": "#",
-      "buttonAlt": "view-more"
+      "buttonAlt": "view-more",
+      "buttonClass": ""
     }
   },
   {
@@ -52,7 +55,8 @@ export const data = [
       "size": "sm",
       "buttonText": "View",
       "buttonLink": "#",
-      "buttonAlt": "view-more"
+      "buttonAlt": "view-more",
+      "buttonClass": ""
     }
   },
   {
@@ -66,7 +70,8 @@ export const data = [
       "size": "sm",
       "buttonText": "View",
       "buttonLink": "#",
-      "buttonAlt": "view-more"
+      "buttonAlt": "view-more",
+      "buttonClass": ""
     }
   }
 ]

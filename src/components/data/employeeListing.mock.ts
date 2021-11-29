@@ -11,6 +11,7 @@ export const data = {
     "buttonText": "Filter",
     "buttonLink": "#",
     "buttonAlt": "filter",
+    "buttonClass": "",
     "filterApi": "/api/employee/filter",
     "filterItems": [
       {
