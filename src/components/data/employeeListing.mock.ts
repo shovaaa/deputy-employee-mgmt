@@ -6,6 +6,11 @@ export const data = {
   navBar: { ...navData },
   saveDetailFormApi: "/api/employee/save",
   employeeDetails: employeeDetails,
+  pagination: {
+    totalPageNumber: 10,
+    currentPageIndex: 1,
+    paginationApi: "/api/employee/page"
+  },
   filterButton: {
     "variant": "outline-grey",
     "size": "sm",
