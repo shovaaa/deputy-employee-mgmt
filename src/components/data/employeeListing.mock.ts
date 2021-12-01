@@ -4,13 +4,14 @@ import { data as employeeDetails } from "../data/employeeDetails.mock";
 export const data = {
   title: "All Employee",
   navBar: { ...navData },
+  saveDetailFormApi: "/api/employee/save",
   employeeDetails: employeeDetails,
   filterButton: {
     "variant": "outline-grey",
     "size": "sm",
     "buttonText": "Filter",
-    "buttonLink": "#",
     "buttonAlt": "filter",
+    "buttonClass": "",
     "filterApi": "/api/employee/filter",
     "filterItems": [
       {

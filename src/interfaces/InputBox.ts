@@ -5,5 +5,6 @@ export interface IInput {
   name: string;
   id: string;
   type: string;
+  value?: string;
   placeholder: string;
 }
