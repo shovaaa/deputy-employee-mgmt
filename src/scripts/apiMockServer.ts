@@ -1,4 +1,5 @@
 import { createServer, Response } from 'miragejs';
+import { profilePicture } from "../components/data/userDetails.mock";
 
 const apiList = [
   {
@@ -84,6 +85,110 @@ const apiList = [
               "buttonAlt": "view-more",
               "buttonClass": ""
             }
+          }
+        ]
+      }
+    }
+  },
+  {
+    url: 'api/employee/save',
+    data: {
+      payload: {
+        employeeDetails: [
+          {
+            "gender": "female",
+            "name": "Suzie Roman",
+            "location": "Sicily",
+            "email": "brad.gibson@example.com",
+            "status": "Employed",
+            "dateOfBirth": "26-08-1997",
+            "address": "South Pole",
+            "employeeId": "9877621476",
+            "viewMoreButton": {
+              "variant": "outline-grey",
+              "size": "sm",
+              "buttonText": "View",
+              
+              "buttonAlt": "view-more",
+              "buttonClass": ""
+            },
+            profilePicture: {...profilePicture}
+          },
+          {
+            "gender": "male",
+            "name": "Rick Deen",
+            "location": "Downtown",
+            "email": "brad.gibson@example.com",
+            "status": "Employed",
+            "dateOfBirth": "26-08-1997",
+            "address": "North Pole",
+            "employeeId": "9877621449",
+            "viewMoreButton": {
+              "variant": "outline-grey",
+              "size": "sm",
+              "buttonText": "View",
+              
+              "buttonAlt": "view-more",
+              "buttonClass": ""
+            },
+            profilePicture: {...profilePicture}
+          },
+          {
+            "gender": "male",
+            "name": "Sam Costanzo",
+            "location": "Downtown",
+            "email": "brad.gibson@example.com",
+            "status": "Employed",
+            "dateOfBirth": "26-08-1997",
+            "address": "North Pole",
+            "employeeId": "9877621023",
+            "viewMoreButton": {
+              "variant": "outline-grey",
+              "size": "sm",
+              "buttonText": "View",
+              
+              "buttonAlt": "view-more",
+              "buttonClass": ""
+            },
+            profilePicture: {...profilePicture}
+          },
+          {
+            "gender": "female",
+            "name": "Patricia Buttini",
+            "location": "Downtown",
+            "email": "brad.gibson@example.com",
+            "status": "Employed",
+            "dateOfBirth": "26-08-1997",
+            "address": "North Pole",
+            "employeeId": "9877621112",
+            "viewMoreButton": {
+              "variant": "outline-grey",
+              "size": "sm",
+              "buttonText": "View",
+              
+              "buttonAlt": "view-more",
+              "buttonClass": ""
+            },
+            profilePicture: {...profilePicture}
+          },
+          {
+            "gender": "male",
+            "name": "Cosmo Kramer",
+            "location": "Downtown",
+            "email": "brad.gibson@example.com",
+            "status": "Employed",
+            "dateOfBirth": "26-08-1997",
+            "address": "North Pole",
+            "employeeId": "9877621398",
+            "viewMoreButton": {
+              "variant": "outline-grey",
+              "size": "sm",
+              "buttonText": "View",
+              
+              "buttonAlt": "view-more",
+              "buttonClass": ""
+            },
+            profilePicture: {...profilePicture}
           }
         ]
       }

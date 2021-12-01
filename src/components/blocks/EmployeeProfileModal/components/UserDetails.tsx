@@ -6,33 +6,27 @@ import Button from "../../Button/Button";
 interface IProps {
   name: string;
   status: string;
-  profilePicture: IImageHolder;
-  tab: string[];
+  profilePicture?: IImageHolder;
 };
 
 const UserDetails = (props: IProps) => {
   return (
     <div className="EmployeeProfileModal-userDetails">
-      <div className="EmployeeProfileModal-userDetails--profilePictureContainer">
+      {props.profilePicture && <div className="EmployeeProfileModal-userDetails--profilePictureContainer">
         <ImageHolder
           alt={props.profilePicture.alt}
           url={props.profilePicture.url}
           displayShape={props.profilePicture.displayShape}
           displaySize={props.profilePicture.displaySize}
         />
-      </div>
+      </div>}
       <div className="EmployeeProfileModal-userDetails--profileDetailContainer">
         <p className="mb-1 EmployeeProfileModal-userDetails--profileDetailContainer-name">{props.name}</p>
         <p className="mb-1 EmployeeProfileModal-userDetails--profileDetailContainer-status">{props.status}</p>
       </div>
-      <div>
-        {props.tab.map((tabValue, index) => {
-          return (
-            <div className="EmployeeProfileModal-userDetails--tab d-block w-100" key={index}>
-              <span>{tabValue}</span>
-            </div>
-          )
-        })}
+
+      <div className="EmployeeProfileModal-userDetails--tab d-block w-100" >
+        <span>'Details'</span>
       </div>
     </div>
   );

@@ -1,51 +1,131 @@
 import Button from '../../Button/Button';
-import React, { useEffect, useState } from 'react';
-import { IInput } from '../../../../interfaces/InputBox';
+import React, { useState } from 'react';
 import InputBox from '../../InputBox/InputBox';
-import { IButton } from '../../../../interfaces/Button';
 
 interface IProps {
-  detailForm: IInput[];
-  saveButton: IButton;
+  location?: string;
+  dateOfBirth?: string;
+  address: string;
+  email: string;
+  employeeId: string;
 }
 
 const DetailForm = (props: IProps) => {
 
   const [detailValue, setDetailValue] = useState({
-    address: props.detailForm.find((detail) => { if (detail.id === 'address') return detail })?.value,
-    email: props.detailForm.find((detail) => { if (detail.id === 'email') return detail })?.value,
-    location: props.detailForm.find((detail) => { if (detail.id === 'location') return detail })?.value,
-    dateOfBirth: props.detailForm.find((detail) => { if (detail.id === 'dateOfBirth') return detail })?.value,
+    address: props.address,
+    email: props.email,
+    location: props.location,
+    dateOfBirth: props.dateOfBirth,
+    employeeId: props.employeeId
   });
 
   const [id, setId] = useState('');
 
+  const callSaveFormDetail = () => {
+    const event = new CustomEvent('deputy-detail-save', { detail: detailValue });
+    document.dispatchEvent(event);
+  };
+
   return (
     <div className="EmployeeProfileModal-detailForm w-100">
-      {
-        props.detailForm.map((value, index) => {
-          const id = value.name;
-          return (
-            <div className="mb-4" key={index}>
-              <InputBox {...value} getId={(value) => setId(value)} onChange={(detail) => {
-                setDetailValue({
-                  address: id === 'address' ? detail : detailValue.address,
-                  email: id === 'email' ? detail : detailValue.email,
-                  location: id === 'location' ? detail : detailValue.location,
-                  dateOfBirth: id === 'dateOfBirth' ? detail : detailValue.dateOfBirth,
-                })
-              }} />
-            </div>
-          )
-        })
-      }
-      <div className="EmployeeProfileModal-detailForm--btn">
+      <div className="mb-4">
+        <InputBox
+          displayHeight="lg"
+          displayWidth="w-75"
+          label="Address"
+          name="address"
+          id="address"
+          type="text"
+          placeholder="Address"
+          value={detailValue.address ? detailValue.address : props.address}
+          getId={(value) => setId(value)}
+          onChange={(detail) => {
+            setDetailValue({
+              address: detail,
+              email: detailValue.email,
+              location: detailValue.location,
+              dateOfBirth: detailValue.dateOfBirth,
+              employeeId: detailValue.employeeId
+            })
+          }}
+        />
+      </div>
+      <div className="mb-4">
+        <InputBox
+          displayHeight="lg"
+          displayWidth="w-75"
+          label="Email"
+          name="email"
+          id="email"
+          type="text"
+          placeholder="Email"
+          value={detailValue.email ? detailValue.email : props.email}
+          getId={(value) => setId(value)}
+          onChange={(detail) => {
+            setDetailValue({
+              address: detailValue.address,
+              email: detail,
+              location: detailValue.location,
+              dateOfBirth: detailValue.dateOfBirth,
+              employeeId: detailValue.employeeId
+            })
+          }}
+        />
+      </div>
+      <div className="mb-4">
+        <InputBox
+          displayHeight="lg"
+          displayWidth="w-75"
+          label="Location"
+          name="location"
+          id="location"
+          type="text"
+          placeholder="Location"
+          getId={(value) => setId(value)}
+          value={detailValue.location ? detailValue.location : props.location}
+          onChange={(detail) => {
+            setDetailValue({
+              address: detailValue.address,
+              email: detailValue.email,
+              location: detail,
+              dateOfBirth: detailValue.dateOfBirth,
+              employeeId: detailValue.employeeId
+            })
+          }}
+        />
+      </div>
+      <div className="mb-4">
+        <InputBox
+          displayHeight="lg"
+          displayWidth="w-75"
+          label="Date Of Birth"
+          name="dateOfBirth"
+          id="dateOfBirth"
+          type="text"
+          placeholder="Date Of Birth"
+          getId={(value) => setId(value)}
+          value={detailValue.dateOfBirth ? detailValue.dateOfBirth : props.dateOfBirth}
+          onChange={(detail) => {
+            setDetailValue({
+              address: detailValue.address,
+              email: detailValue.email,
+              location: detailValue.location,
+              dateOfBirth: detail,
+              employeeId: detailValue.employeeId
+            })
+          }}
+        />
+      </div>
+      <div
+        className="EmployeeProfileModal-detailForm--btn"
+        onClick={() => callSaveFormDetail()}>
         <Button
-          variant={props.saveButton.variant}
-          size={props.saveButton.size}
-          buttonText={props.saveButton.buttonText}
-          buttonAlt={props.saveButton.buttonAlt}
-          buttonClass={props.saveButton.buttonClass}
+          variant="blue"
+          size="sm"
+          buttonText="Save"
+          buttonAlt="save-btn"
+          buttonClass=""
         />
       </div>
     </div>

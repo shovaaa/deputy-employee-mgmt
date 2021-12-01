@@ -4,6 +4,7 @@ import { data as employeeDetails } from "../data/employeeDetails.mock";
 export const data = {
   title: "All Employee",
   navBar: { ...navData },
+  saveDetailFormApi: "/api/employee/save",
   employeeDetails: employeeDetails,
   filterButton: {
     "variant": "outline-grey",

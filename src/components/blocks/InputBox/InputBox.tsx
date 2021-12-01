@@ -8,7 +8,7 @@ interface IProps extends IInput {
 
 const InputBox = (props: IProps) => {
   const [inputValue, setInputValue] = useState(props.value);
-  
+
   useEffect(() => {
     props.getId && props.getId(props.id);
   }, []);
@@ -16,9 +16,13 @@ const InputBox = (props: IProps) => {
   return (
     <div>
       {props.label && <label htmlFor={props.name} className="input-label">{props.label}</label>}
-      <input type={props.type} id={props.id} name={props.name} placeholder={props.placeholder}
+      <input
+        type={props.type}
+        id={props.id}
+        name={props.name}
+        placeholder={props.placeholder}
         className={`input input-${props.displayHeight} ${props.displayWidth}`}
-        onChange={(e) =>{ props.onChange(e.target.value); setInputValue(e.target.value)}}
+        onChange={(e) => { props.onChange(e.target.value); setInputValue(e.target.value) }}
         value={inputValue}
       />
     </div>
