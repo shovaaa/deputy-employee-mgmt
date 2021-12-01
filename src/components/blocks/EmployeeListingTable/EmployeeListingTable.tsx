@@ -135,8 +135,12 @@ const EmployeeListingTable = (props: IProps) => {
     };
   });
 
+  useEffect(() => {
+    setEmployeeDetails(props.employeeDetails);
+  }, [props.employeeDetails]);
+
   return (
-    <div className="employeeListingTable">
+    <div className="employeeListingTable mb-4">
       <div className="d-flex justify-content-between">
         <SearchBox
           {...props.searchBox}

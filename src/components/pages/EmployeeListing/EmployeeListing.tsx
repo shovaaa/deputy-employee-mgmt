@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { INavBar } from "../../../interfaces/NavBar";
 import EmployeeListingTable from "../../blocks/EmployeeListingTable/EmployeeListingTable";
 import NavBar from "../../blocks/NavBar/NavBar";
 import { IEmployeeListing } from "../../blocks/EmployeeListingTable/EmployeeListingTable";
 import { IProps as ISearchBox } from "../../blocks/SearchBox/SearchBox";
-import {IProps as IFilter} from "../../blocks/Filter/Filter";
+import { IProps as IFilter } from "../../blocks/Filter/Filter";
+import DeputyPagination, {IProps as IPagination} from "../../blocks/DeputyPagination/DeputyPagination";
 
 interface IProps {
   title: string;
@@ -13,9 +14,11 @@ interface IProps {
   saveDetailFormApi: string;
   searchBox: ISearchBox;
   filterButton: IFilter;
+  pagination: IPagination;
 };
 
 const EmployeeListing = (props: IProps) => {
+  const [employeeDetails, setEmployeeDetails] = useState<IEmployeeListing[]>(props.employeeDetails);
 
   return (
     <div className="employeeListing container">
@@ -23,12 +26,16 @@ const EmployeeListing = (props: IProps) => {
       <div>
         <h1 className="employeeListing-title">{props.title}</h1>
       </div>
-      
-      <EmployeeListingTable 
-      saveDetailFormApi={props.saveDetailFormApi}
-      searchBox={props.searchBox} 
-      filterButton={props.filterButton}
-      employeeDetails={props.employeeDetails} />
+      <div>
+        <EmployeeListingTable
+          saveDetailFormApi={props.saveDetailFormApi}
+          searchBox={props.searchBox}
+          filterButton={props.filterButton}
+          employeeDetails={employeeDetails} />
+      </div>
+      <div>
+        <DeputyPagination {...props.pagination} setEmployeeDetails={(value)=>setEmployeeDetails(value)} />
+      </div>
     </div>
   );
 };
