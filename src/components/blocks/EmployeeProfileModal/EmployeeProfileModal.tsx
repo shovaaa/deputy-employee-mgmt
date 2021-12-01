@@ -17,11 +17,12 @@ interface IProps {
 const EmployeeProfileModal = (props: IProps) => {
   return (
     <div className="EmployeeProfileModal">
-      <div className="d-flex">
+      <div className="d-block d-lg-flex">
         <UserDetails
           name={props.name}
           status={props.status}
-          profilePicture={props.profilePicture} />
+          profilePicture={props.profilePicture}
+        />
         <DetailForm
           employeeId={props.employeeId}
           location={props.location}

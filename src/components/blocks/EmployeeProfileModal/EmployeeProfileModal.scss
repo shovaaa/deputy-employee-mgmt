@@ -22,7 +22,11 @@
     padding: 5% 0;
     text-align: center;
     background-color: $clr-light-grey;
-    
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+    }
+
     &--profileDetailContainer {
       padding: 15px 0;
 
@@ -42,6 +46,10 @@
       background-color: $clr-white;
       text-align: left;
 
+      @include media-breakpoint-down(lg) {
+        margin-right: 8px;
+      }
+
       span {
         font-weight: 700;
       }
@@ -53,6 +61,10 @@
 
     &--btn {
       text-align: right;
+
+      @include media-breakpoint-down(lg) {
+        text-align: center;
+      }
     }
   }
 }

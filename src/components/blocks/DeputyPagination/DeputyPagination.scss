@@ -1,12 +1,22 @@
 .deputyPagination {
   &-btnContainer {
     width: 15%;
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+      margin-bottom: 16px;
+    }
   }
 
   &-container {
     .pagination-lg .page-link {
       padding: 0.5rem 1.5rem;
       color: $clr-black;
+    }
+
+    .pagination-sm .page-link {
+      color: $clr-black;
+      padding: 0.5rem 0.75rem;
     }
 
     .page-item.active .page-link {

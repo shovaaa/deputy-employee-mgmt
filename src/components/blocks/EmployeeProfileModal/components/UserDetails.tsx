@@ -25,8 +25,8 @@ const UserDetails = (props: IProps) => {
         <p className="mb-1 EmployeeProfileModal-userDetails--profileDetailContainer-status">{props.status}</p>
       </div>
 
-      <div className="EmployeeProfileModal-userDetails--tab d-block w-100" >
-        <span>'Details'</span>
+      <div className="EmployeeProfileModal-userDetails--tab d-block w-lg-100" >
+        <span>Details</span>
       </div>
     </div>
   );

@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { INavBar } from "../../../interfaces/NavBar";
 import EmployeeListingTable from "../../blocks/EmployeeListingTable/EmployeeListingTable";
-import NavBar from "../../blocks/NavBar/NavBar";
 import { IEmployeeListing } from "../../blocks/EmployeeListingTable/EmployeeListingTable";
 import { IProps as ISearchBox } from "../../blocks/SearchBox/SearchBox";
 import { IProps as IFilter } from "../../blocks/Filter/Filter";
@@ -9,7 +7,6 @@ import DeputyPagination, {IProps as IPagination} from "../../blocks/DeputyPagina
 
 interface IProps {
   title: string;
-  navBar: INavBar;
   employeeDetails: IEmployeeListing[];
   saveDetailFormApi: string;
   searchBox: ISearchBox;
@@ -22,7 +19,6 @@ const EmployeeListing = (props: IProps) => {
 
   return (
     <div className="employeeListing container">
-      <NavBar {...props.navBar} />
       <div>
         <h1 className="employeeListing-title">{props.title}</h1>
       </div>
@@ -33,8 +29,11 @@ const EmployeeListing = (props: IProps) => {
           filterButton={props.filterButton}
           employeeDetails={employeeDetails} />
       </div>
-      <div>
-        <DeputyPagination {...props.pagination} setEmployeeDetails={(value)=>setEmployeeDetails(value)} />
+      <div className="d-none d-lg-block">
+        <DeputyPagination {...props.pagination} setEmployeeDetails={(value)=>setEmployeeDetails(value)} screen="large" />
+      </div>
+      <div className="d-block d-lg-none">
+        <DeputyPagination {...props.pagination} setEmployeeDetails={(value)=>setEmployeeDetails(value)} screen="small" />
       </div>
     </div>
   );
