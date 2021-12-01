@@ -1,10 +1,16 @@
 .filter {
   position: relative;
+  margin-bottom: 20px;
 
   &-dropdownIcon {
     position: absolute;
     right: 10px;
     top: 7px;
+
+    @include media-breakpoint-down(lg) {
+      left: calc(95px - 25px);
+    }
+
   }
 
   &-dropdownMenu {

@@ -9,6 +9,8 @@ export interface IProps {
   currentPageIndex: number;
   paginationApi: string;
 
+  screen: string;
+
   setEmployeeDetails: (value: IEmployeeListing[]) => void;
 }
 
@@ -46,24 +48,24 @@ const DeputyPagination = (props: IProps) => {
   };
 
   return (
-    <div className="d-flex justify-content-between">
-      <div onClick={() => callPaginationApi((activePageIndex - 1), false, true, false)} className="deputyPagination-btnContainer">
+    <div className="d-block text-center d-lg-flex justify-content-between">
+      <div onClick={() => callPaginationApi((activePageIndex - 1), false, true, false)} className="deputyPagination-btnContainer d-flex justify-content-center">
         <Button
           variant="outline-grey"
-          size="lg"
+          size={props.screen === 'large' ? 'lg' : 'sm'}
           buttonAlt="previous-page"
           buttonText="Previous"
           buttonClass="deputyPagination-btn w-100"
         />
       </div>
-      <div className="deputyPagination-container">
-        <Pagination size="lg">{items}</Pagination>
+      <div className="deputyPagination-container d-flex justify-content-center">
+        <Pagination size={props.screen === 'large' ? 'lg' : 'sm'}>{items}</Pagination>
       </div>
 
-      <div onClick={() => callPaginationApi((activePageIndex + 1), false, false, true)} className="deputyPagination-btnContainer">
+      <div onClick={() => callPaginationApi((activePageIndex + 1), false, false, true)} className="deputyPagination-btnContainer d-flex justify-content-center">
         <Button
           variant="outline-grey"
-          size="lg"
+          size={props.screen === 'large' ? 'lg' : 'sm'}
           buttonAlt="next-page"
           buttonText="Next"
           buttonClass="deputyPagination-btn w-100"

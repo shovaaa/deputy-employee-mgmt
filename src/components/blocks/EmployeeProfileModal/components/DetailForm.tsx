@@ -22,7 +22,7 @@ const DetailForm = (props: IProps) => {
 
   const [id, setId] = useState('');
 
-  const callSaveFormDetail = () => {
+  const callSaveForlgetail = () => {
     const event = new CustomEvent('deputy-detail-save', { detail: detailValue });
     document.dispatchEvent(event);
   };
@@ -32,7 +32,7 @@ const DetailForm = (props: IProps) => {
       <div className="mb-4">
         <InputBox
           displayHeight="lg"
-          displayWidth="w-75"
+          displayWidth="w-lg-75 w-100"
           label="Address"
           name="address"
           id="address"
@@ -54,7 +54,7 @@ const DetailForm = (props: IProps) => {
       <div className="mb-4">
         <InputBox
           displayHeight="lg"
-          displayWidth="w-75"
+          displayWidth="w-lg-75 w-100"
           label="Email"
           name="email"
           id="email"
@@ -76,7 +76,7 @@ const DetailForm = (props: IProps) => {
       <div className="mb-4">
         <InputBox
           displayHeight="lg"
-          displayWidth="w-75"
+          displayWidth="w-lg-75 w-100"
           label="Location"
           name="location"
           id="location"
@@ -98,7 +98,7 @@ const DetailForm = (props: IProps) => {
       <div className="mb-4">
         <InputBox
           displayHeight="lg"
-          displayWidth="w-75"
+          displayWidth="w-lg-75 w-100"
           label="Date Of Birth"
           name="dateOfBirth"
           id="dateOfBirth"
@@ -119,7 +119,7 @@ const DetailForm = (props: IProps) => {
       </div>
       <div
         className="EmployeeProfileModal-detailForm--btn"
-        onClick={() => callSaveFormDetail()}>
+        onClick={() => callSaveForlgetail()}>
         <Button
           variant="blue"
           size="sm"

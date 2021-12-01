@@ -141,7 +141,7 @@ const EmployeeListingTable = (props: IProps) => {
 
   return (
     <div className="employeeListingTable mb-4">
-      <div className="d-flex justify-content-between">
+      <div className="d-block d-lg-flex justify-content-between align-items-center">
         <SearchBox
           {...props.searchBox}
           setSearchValue={(v) => setSearchValue(v)}
@@ -152,21 +152,21 @@ const EmployeeListingTable = (props: IProps) => {
           setFilterTerm={(v) => setFilterTerm(v)}
         />
       </div>
-      <div className="container employeeListingTable-container">
+      <div className="container employeeListingTable-container d-none d-lg-block">
         <div className="row mb-3">
-          <div className="col employeeListingTable-title">
+          <div className="col-lg employeeListingTable-title">
             Name
           </div>
-          <div className="col employeeListingTable-title">
+          <div className="col-lg employeeListingTable-title">
             Address
           </div>
-          <div className="col employeeListingTable-title col-3">
+          <div className="col-lg employeeListingTable-title col-lg-3">
             Email
           </div>
-          <div className="col employeeListingTable-title">
+          <div className="col-lg employeeListingTable-title">
             Status
           </div>
-          <div className="col employeeListingTable-title">
+          <div className="col-lg employeeListingTable-title">
 
           </div>
         </div>
@@ -174,19 +174,19 @@ const EmployeeListingTable = (props: IProps) => {
           employeeDetails.map((employee, index) => {
             return (
               <div className="row mb-3 d-flex align-items-center" key={index}>
-                <div className="col">
+                <div className="col-lg">
                   {employee.name}
                 </div>
-                <div className="col">
+                <div className="col-lg">
                   {employee.address}
                 </div>
-                <div className="col col-3">
+                <div className="col-lg-3">
                   {employee.email}
                 </div>
-                <div className="col">
+                <div className="col-lg">
                   {employee.status}
                 </div>
-                <div className="col text-right" onClick={() => {
+                <div className="col-lg text-right" onClick={() => {
                   const detail = {
                     name: employee.name,
                     status: employee.status,
@@ -214,6 +214,73 @@ const EmployeeListingTable = (props: IProps) => {
           })
         }
       </div>
+
+      {employeeDetails.map((employee, index) => {
+        return (
+          <div className="d-block d-lg-none container employeeListingTable-container" key={index}>
+            <div className="row mb-3">
+              <div className="col-4 employeeListingTable-title">
+                Name
+              </div>
+              <div className="col-8">
+                {employee.name}
+              </div>
+            </div>
+            <div className="row mb-3">
+              <div className="col-4 employeeListingTable-title">
+                Address
+              </div>
+              <div className="col-8">
+                {employee.address}
+              </div>
+            </div>
+            <div className="row mb-3">
+              <div className="col-4 employeeListingTable-title">
+                Email
+              </div>
+              <div className="col-8">
+                {employee.email}
+              </div>
+            </div>
+            <div className="row mb-3">
+              <div className="col-4 employeeListingTable-title">
+                Status
+              </div>
+              <div className="col-8">
+                {employee.status}
+              </div>
+            </div>
+            <div className="row mb-3">
+              <div className="col-4 employeeListingTable-title">
+
+              </div>
+              <div className="col-8 text-right" onClick={() => {
+                const detail = {
+                  name: employee.name,
+                  status: employee.status,
+                  address: employee.address,
+                  email: employee.email,
+                  location: employee.location,
+                  dateOfBirth: employee.dateOfBirth,
+                  profilePicture: employee.profilePicture,
+                  employeeId: employee.employeeId
+                };
+
+                setProfileDetail(detail);
+                setShowModal(true);
+              }}>
+                <Button
+                  variant={employee.viewMoreButton.variant}
+                  size={employee.viewMoreButton.size}
+                  buttonAlt={employee.viewMoreButton.buttonAlt}
+                  buttonText={employee.viewMoreButton.buttonText}
+                  buttonClass={employee.viewMoreButton.buttonClass}
+                />
+              </div>
+            </div>
+          </div>
+        )
+      })}
       <Modal
         show={showModal}
         onHide={() => setShowModal(false)}
