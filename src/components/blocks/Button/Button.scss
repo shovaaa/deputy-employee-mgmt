@@ -88,7 +88,7 @@
     @include button($clr-black, $clr-white, $clr-white, $clr-black-hover, $clr-white, darken($clr-black, 0.5), $clr-primary, $clr-black-disabled, $clr-grey, 5px)
   }
 
-  &-link {
+  &-text{
     letter-spacing: 1px;
     text-overflow: ellipsis;
 	  white-space: nowrap;
