@@ -139,6 +139,8 @@ const EmployeeListingTable = (props: IProps) => {
     setEmployeeDetails(props.employeeDetails);
   }, [props.employeeDetails]);
 
+  console.log(filterTerm);
+
   return (
     <div className="EmployeeListingTable mb-4">
       <div className="d-block d-lg-flex justify-content-between align-items-center">

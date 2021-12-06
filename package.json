@@ -60,13 +60,10 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/react": "^12.1.2",
     "@types/react-test-renderer": "^17.0.1",
     "eslint": "^7.32.0",
     "eslint-plugin-react": "^7.27.1",
-    "jest-dom": "^4.0.0",
     "miragejs": "^0.1.42",
-    "react-test-renderer": "^17.0.2",
     "stylelint": "^14.1.0"
   }
 }

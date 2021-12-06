@@ -16,13 +16,16 @@ interface IFilterItem {
 
 const Filter = (props: IProps) => {
   const [showDropdown, setShowDropDown] = useState<boolean>(false);
+
+  console.log(props.buttonText);
+
   return (
     <div className="Filter">
       <div onMouseOut={() => { setShowDropDown(false) }} onMouseOver={() => { setShowDropDown(true) }} onClick={() => { setShowDropDown(true) }}>
         <Button
           variant="outline-grey"
           size="sm"
-          buttonText="Filter"
+          buttonText={props.buttonText || "Filter"}
           buttonAlt="filter"
           buttonClass=""
         />
