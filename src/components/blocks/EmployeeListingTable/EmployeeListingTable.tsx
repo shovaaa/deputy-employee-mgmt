@@ -140,7 +140,7 @@ const EmployeeListingTable = (props: IProps) => {
   }, [props.employeeDetails]);
 
   return (
-    <div className="employeeListingTable mb-4">
+    <div className="EmployeeListingTable mb-4">
       <div className="d-block d-lg-flex justify-content-between align-items-center">
         <SearchBox
           {...props.searchBox}
@@ -152,21 +152,21 @@ const EmployeeListingTable = (props: IProps) => {
           setFilterTerm={(v) => setFilterTerm(v)}
         />
       </div>
-      <div className="container employeeListingTable-container d-none d-lg-block">
+      <div className="container EmployeeListingTable-container d-none d-lg-block">
         <div className="row mb-3">
-          <div className="col-lg employeeListingTable-title">
+          <div className="col-lg EmployeeListingTable-title">
             Name
           </div>
-          <div className="col-lg employeeListingTable-title">
+          <div className="col-lg EmployeeListingTable-title">
             Address
           </div>
-          <div className="col-lg employeeListingTable-title col-lg-3">
+          <div className="col-lg EmployeeListingTable-title col-lg-3">
             Email
           </div>
-          <div className="col-lg employeeListingTable-title">
+          <div className="col-lg EmployeeListingTable-title">
             Status
           </div>
-          <div className="col-lg employeeListingTable-title">
+          <div className="col-lg EmployeeListingTable-title">
 
           </div>
         </div>
@@ -217,9 +217,9 @@ const EmployeeListingTable = (props: IProps) => {
 
       {employeeDetails.map((employee, index) => {
         return (
-          <div className="d-block d-lg-none container employeeListingTable-container" key={index}>
+          <div className="d-block d-lg-none container EmployeeListingTable-container" key={index}>
             <div className="row mb-3">
-              <div className="col-4 employeeListingTable-title">
+              <div className="col-4 EmployeeListingTable-title">
                 Name
               </div>
               <div className="col-8">
@@ -227,7 +227,7 @@ const EmployeeListingTable = (props: IProps) => {
               </div>
             </div>
             <div className="row mb-3">
-              <div className="col-4 employeeListingTable-title">
+              <div className="col-4 EmployeeListingTable-title">
                 Address
               </div>
               <div className="col-8">
@@ -235,7 +235,7 @@ const EmployeeListingTable = (props: IProps) => {
               </div>
             </div>
             <div className="row mb-3">
-              <div className="col-4 employeeListingTable-title">
+              <div className="col-4 EmployeeListingTable-title">
                 Email
               </div>
               <div className="col-8">
@@ -243,7 +243,7 @@ const EmployeeListingTable = (props: IProps) => {
               </div>
             </div>
             <div className="row mb-3">
-              <div className="col-4 employeeListingTable-title">
+              <div className="col-4 EmployeeListingTable-title">
                 Status
               </div>
               <div className="col-8">
@@ -251,7 +251,7 @@ const EmployeeListingTable = (props: IProps) => {
               </div>
             </div>
             <div className="row mb-3">
-              <div className="col-4 employeeListingTable-title">
+              <div className="col-4 EmployeeListingTable-title">
 
               </div>
               <div className="col-8 text-right" onClick={() => {
@@ -284,7 +284,7 @@ const EmployeeListingTable = (props: IProps) => {
       <Modal
         show={showModal}
         onHide={() => setShowModal(false)}
-        className="employeeListingTable-modal"
+        className="EmployeeListingTable-modal"
         centered
       >
         <Modal.Header closeButton>

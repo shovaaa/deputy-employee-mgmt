@@ -17,10 +17,8 @@ export interface IProps {
 const DeputyPagination = (props: IProps) => {
   const [activePageIndex, setActivePageIndex] = useState(props.currentPageIndex);
 
-  const callPaginationApi = (index: number, isCurrent: boolean = false, isPrevious: boolean = false, isNext: boolean = false) => {
-    isPrevious && setActivePageIndex(index);
-    isNext && setActivePageIndex(index);
-    isCurrent && setActivePageIndex(index);
+  const callPaginationApi = (index: number) => {
+    setActivePageIndex(index);
 
     if(index === 0) {
       setActivePageIndex(1);
@@ -41,7 +39,7 @@ const DeputyPagination = (props: IProps) => {
 
   for (let number = 1; number <= props.totalPageNumber; number++) {
     items.push(
-      <Pagination.Item key={number} active={number === activePageIndex} onClick={() => callPaginationApi(number, true)}>
+      <Pagination.Item key={number} active={number === activePageIndex} onClick={() => callPaginationApi(number)}>
         {number}
       </Pagination.Item>,
     );
@@ -49,26 +47,26 @@ const DeputyPagination = (props: IProps) => {
 
   return (
     <div className="d-block text-center d-lg-flex justify-content-between">
-      <div onClick={() => callPaginationApi((activePageIndex - 1), false, true, false)} className="deputyPagination-btnContainer d-flex justify-content-center">
+      <div onClick={() => callPaginationApi(activePageIndex - 1)} className="DeputyPagination-btnContainer d-flex justify-content-center">
         <Button
           variant="outline-grey"
           size={props.screen === 'large' ? 'lg' : 'sm'}
           buttonAlt="previous-page"
           buttonText="Previous"
-          buttonClass="deputyPagination-btn w-100"
+          buttonClass="DeputyPagination-btn w-100"
         />
       </div>
-      <div className="deputyPagination-container d-flex justify-content-center">
+      <div className="DeputyPagination-container d-flex justify-content-center">
         <Pagination size={props.screen === 'large' ? 'lg' : 'sm'}>{items}</Pagination>
       </div>
 
-      <div onClick={() => callPaginationApi((activePageIndex + 1), false, false, true)} className="deputyPagination-btnContainer d-flex justify-content-center">
+      <div onClick={() => callPaginationApi(activePageIndex + 1)} className="DeputyPagination-btnContainer d-flex justify-content-center">
         <Button
           variant="outline-grey"
           size={props.screen === 'large' ? 'lg' : 'sm'}
           buttonAlt="next-page"
           buttonText="Next"
-          buttonClass="deputyPagination-btn w-100"
+          buttonClass="DeputyPagination-btn w-100"
         />
       </div>
     </div>
