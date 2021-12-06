@@ -6,7 +6,6 @@ import { IProps as IFilter } from "../../blocks/Filter/Filter";
 import DeputyPagination, {IProps as IPagination} from "../../blocks/DeputyPagination/DeputyPagination";
 
 interface IProps {
-  title: string;
   employeeDetails: IEmployeeListing[];
   saveDetailFormApi: string;
   searchBox: ISearchBox;
@@ -18,9 +17,9 @@ const EmployeeListing = (props: IProps) => {
   const [employeeDetails, setEmployeeDetails] = useState<IEmployeeListing[]>(props.employeeDetails);
 
   return (
-    <div className="employeeListing container">
+    <div className="EmployeeListing container">
       <div>
-        <h1 className="employeeListing-title">{props.title}</h1>
+        <h1 className="EmployeeListing-title">All Employee</h1>
       </div>
       <div>
         <EmployeeListingTable

@@ -2,7 +2,6 @@ import { data as navData } from "../data/navBar.mock";
 import { data as employeeDetails } from "../data/employeeDetails.mock";
 
 export const data = {
-  title: "All Employee",
   navBar: { ...navData },
   saveDetailFormApi: "/api/employee/save",
   employeeDetails: employeeDetails,
@@ -12,11 +11,6 @@ export const data = {
     paginationApi: "/api/employee/page"
   },
   filterButton: {
-    "variant": "outline-grey",
-    "size": "sm",
-    "buttonText": "Filter",
-    "buttonAlt": "filter",
-    "buttonClass": "",
     "filterApi": "/api/employee/filter",
     "filterItems": [
       {
@@ -42,13 +36,6 @@ export const data = {
     ]
   },
   searchBox: {
-    displayHeight: "lg",
-    displayWidth: "w-100",
-    label: { undefined },
-    name: "search-box",
-    id: "search-box",
-    type: "text",
-    placeholder: "Search People",
     callApi: "/api/employee/search"
   }
 }

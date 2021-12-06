@@ -7,8 +7,8 @@ interface IProps extends IImageHolder {
 
 const ImageHolder = (props:IProps) => {
   return (
-    <div className={`imageHolder`}>
-      <img alt={props.alt} src={props.url} className={`imageHolder-${props.displaySize} imageHolder-${props.displayShape}`} />
+    <div className={`ImageHolder`}>
+      <img alt={props.alt} src={props.url} className={`ImageHolder-${props.displaySize} ImageHolder-${props.displayShape}`} />
     </div>
   );
 };

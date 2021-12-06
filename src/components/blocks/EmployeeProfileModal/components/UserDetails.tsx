@@ -1,7 +1,6 @@
 import React from "react";
 import { IImageHolder } from "../../../../interfaces/ImageHolder";
 import ImageHolder from "../../ImageHolder/ImageHolder";
-import Button from "../../Button/Button";
 
 interface IProps {
   name: string;
@@ -16,8 +15,8 @@ const UserDetails = (props: IProps) => {
         <ImageHolder
           alt={props.profilePicture.alt}
           url={props.profilePicture.url}
-          displayShape={props.profilePicture.displayShape}
-          displaySize={props.profilePicture.displaySize}
+          displayShape="round"
+          displaySize="lg"
         />
       </div>}
       <div className="EmployeeProfileModal-userDetails--profileDetailContainer">
